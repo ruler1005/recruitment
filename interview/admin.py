@@ -32,15 +32,15 @@ class CandidateAdmin(admin.ModelAdmin):
             "hr_stability",
             "hr_advantage", "hr_disadvantage", "hr_result", "hr_interviewer_user", "hr_remark")})
     )
-    # 过滤器
+    # 过滤器字段
     list_filter = (
         'city', 'first_result', 'second_result', 'hr_result', 'first_interviewer_user', 'second_interviewer_user',
         'hr_interviewer_user')
 
-    # 排序
+    # 可排序字段
     ordering = ('hr_result', 'second_result', 'first_result')
     
-    # 搜索
+    # 可搜索字段
     search_fields = ('username', 'phone', 'email', 'bachelor_school')
 
 
